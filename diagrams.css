@@ -1,0 +1,140 @@
+.research-diagram {
+  display: block;
+  width: 100%;
+  height: auto;
+  color: #20251f;
+  font-family: inherit;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.research-diagram text {
+  font-family: inherit;
+  fill: #20251f;
+}
+
+.research-diagram .rd-kicker {
+  font-size: 9.1px;
+  font-weight: 800;
+  letter-spacing: 0.9px;
+}
+
+.research-diagram .rd-label {
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: -0.25px;
+}
+
+.research-diagram .rd-label--small {
+  font-size: 11.2px;
+  letter-spacing: -0.15px;
+}
+
+.research-diagram .rd-small {
+  font-size: 9.6px;
+  font-weight: 500;
+  letter-spacing: -0.1px;
+}
+
+.research-diagram .rd-small--bold {
+  font-weight: 750;
+}
+
+.research-diagram .rd-footer {
+  font-size: 8px;
+  font-weight: 750;
+  letter-spacing: 0.5px;
+}
+
+.research-diagram .rd-footer--tiny {
+  font-size: 7.1px;
+  letter-spacing: 0.3px;
+}
+
+.research-diagram .rd-label--light,
+.research-diagram .rd-small--light {
+  fill: #fffdf7;
+}
+
+.research-diagram .rd-icon {
+  fill: none;
+  stroke: #20251f;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.research-diagram .rd-icon--light {
+  stroke: #fffdf7;
+}
+
+.research-diagram .rd-route {
+  fill: none;
+  stroke-width: 1.65;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.research-diagram .rd-route--dashed {
+  stroke-dasharray: 3 4;
+  opacity: 0.7;
+}
+
+/* Static routes remain readable in browsers without CSS motion paths. */
+.research-diagram .rd-flow {
+  visibility: hidden;
+}
+
+@supports (offset-path: path('M0 0 L10 10')) {
+  .research-diagram .rd-flow {
+    visibility: visible;
+    offset-distance: 0%;
+    offset-rotate: 0deg;
+    animation: rd-travel 3.8s linear infinite;
+    animation-delay: var(--rd-delay, 0s);
+  }
+}
+
+.research-diagram .rd-pulse {
+  animation: rd-breathe 3.8s ease-in-out infinite;
+}
+
+.research-diagram .rd-stock {
+  animation: rd-stock 4.8s ease-in-out infinite;
+  animation-delay: var(--rd-delay, 0s);
+}
+
+@keyframes rd-travel {
+  0% { offset-distance: 0%; opacity: 0; }
+  12% { opacity: 1; }
+  88% { opacity: 1; }
+  100% { offset-distance: 100%; opacity: 0; }
+}
+
+@keyframes rd-breathe {
+  0%, 100% { opacity: 0.12; }
+  50% { opacity: 0.34; }
+}
+
+@keyframes rd-stock {
+  0%, 100% { opacity: 0.92; }
+  50% { opacity: 0.58; }
+}
+
+html[data-motion='paused'] .research-diagram .rd-flow,
+html[data-motion='paused'] .research-diagram .rd-pulse,
+html[data-motion='paused'] .research-diagram .rd-stock {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .research-diagram .rd-flow {
+    display: none;
+    animation: none;
+  }
+
+  .research-diagram .rd-pulse,
+  .research-diagram .rd-stock {
+    animation: none;
+  }
+}
