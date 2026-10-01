@@ -6,13 +6,13 @@
  */
 
 const C = {
-  ink: '#20251f',
-  paper: '#f6f3eb',
-  gold: '#e8bc57',
-  blue: '#a5b6c8',
-  sage: '#aeb69b',
-  rust: '#c87b55',
-  white: '#fffdf7',
+  ink: '#242424',
+  paper: '#fafaf8',
+  gold: '#e4c45b',
+  blue: '#d7d7d3',
+  sage: '#bdbdb7',
+  rust: '#a6a6a0',
+  white: '#ffffff',
 };
 
 let sequence = 0;

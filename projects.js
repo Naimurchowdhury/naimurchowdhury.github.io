@@ -2,7 +2,7 @@ export const projects = [
   {
     id: 'redistribution', title: 'Relief that learns to cooperate.',
     paperTitle: 'CoRe-MARL: Cooperative Redistribution Under Unknown Dynamics Using Recurrent Multi-Agent Reinforcement Learning',
-    category: 'learning', tags: ['Multi-agent RL', 'Humanitarian logistics'], status: 'Research manuscript', color: '#a5b6c8',
+    category: 'learning', tags: ['Multi-agent RL', 'Humanitarian logistics'], status: 'Research manuscript', color: '#f1f1ee',
     summary: 'What if relief centers could learn to share? Recurrent multi-agent learning coordinates scarce supplies when demand is uncertain.',
     metric: '33.2%', metricLabel: 'smaller service gap in simulation',
     question: 'When every relief center sees only part of a changing network, how can they serve local needs while helping the centers under the greatest pressure?',
@@ -15,7 +15,7 @@ export const projects = [
   {
     id: 'substitution', title: 'A smarter food swap.',
     paperTitle: 'Beyond Similarity: Heterogeneous Graph Learning for Multi-Objective Food Substitution in Charitable Food Agencies',
-    category: 'learning', tags: ['Graph learning', 'Food recommendation'], status: 'Preprint · 2026', color: '#aeb69b',
+    category: 'learning', tags: ['Graph learning', 'Food recommendation'], status: 'Preprint · 2026', color: '#f1f1ee',
     summary: 'A good substitute is more than a similar food. A graph brings household preferences, nutrition, and similarity into the same conversation.',
     metric: '9,903', metricLabel: 'foods, connected through evidence',
     question: 'How can charitable food agencies recommend substitutes that account for familiarity, health suitability, and the food originally requested?',
@@ -28,7 +28,7 @@ export const projects = [
   {
     id: 'popup', title: 'Bring food closer.',
     paperTitle: 'Bringing Food Closer: A Stochastic Programming Approach to Analyze the Role of Pop-up Markets in a Food Bank Network to Improve Accessibility',
-    category: 'optimization', tags: ['Stochastic optimization', 'Food access'], status: 'Working paper', color: '#e1c790',
+    category: 'optimization', tags: ['Stochastic optimization', 'Food access'], status: 'Working paper', color: '#f1f1ee',
     summary: 'The right place can make all the difference. Stochastic optimization locates pop-up markets to reduce the distance between people and food.',
     metric: '37.15%', metricLabel: 'lower maximum expected travel',
     question: 'Where should temporary food markets open to improve access when pantry schedules and donation volumes are uncertain?',
@@ -41,7 +41,7 @@ export const projects = [
   {
     id: 'norms', title: 'Better, together.',
     paperTitle: 'Influence of Norms in Alliance Characteristics of Humanitarian Food Agencies: Capability, Compatibility and Satisfaction',
-    category: 'simulation', tags: ['Agent-based simulation', 'Collaboration'], status: 'WSC · 2025', color: '#cf9b7e',
+    category: 'simulation', tags: ['Agent-based simulation', 'Collaboration'], status: 'WSC · 2025', color: '#f1f1ee',
     summary: 'Who partners with whom matters. Simulated food-agency networks reveal how collaboration norms shape satisfaction and fairness.',
     metric: '150', metricLabel: 'agencies in a simulated network',
     question: 'Do agencies benefit more from partners like themselves, or from partners with different, complementary capabilities?',
@@ -54,7 +54,7 @@ export const projects = [
   {
     id: 'preferences', title: 'Learn the priorities behind the decisions.',
     paperTitle: 'Preference Learning in a Multi-Agent Food Bank Network with Local Objectives: A Policy Gradient Approach',
-    category: 'learning', tags: ['Preference learning', 'Hierarchical optimization'], status: 'Working paper', color: '#b0bec0',
+    category: 'learning', tags: ['Preference learning', 'Hierarchical optimization'], status: 'Working paper', color: '#f1f1ee',
     summary: 'Every allocation reflects a trade-off. Policy-gradient learning uncovers how food-bank decision-makers balance equity, effectiveness, and efficiency.',
     metric: '6', metricLabel: 'branches, each with local priorities',
     question: 'Can we infer the priorities of a food-bank hub and its branches from their allocation decisions, without asking every decision-maker to specify objective weights?',
@@ -67,7 +67,7 @@ export const projects = [
   {
     id: 'dissertation', title: 'Food networks, built around people.',
     paperTitle: 'Location-Allocation and Multi-Agent Preferences in a Food Bank Network',
-    category: 'optimization', tags: ['Doctoral research', 'Decision science'], status: 'Dissertation · 2026', color: '#b9beb0',
+    category: 'optimization', tags: ['Doctoral research', 'Decision science'], status: 'Dissertation · 2026', color: '#f1f1ee',
     summary: 'My doctoral work connects three questions: where support belongs, what a network can handle, and which priorities should guide its decisions.',
     metric: '3', metricLabel: 'perspectives on better food-bank decisions',
     question: 'How can a food-bank network improve access while respecting the capacities and competing priorities of its local agencies?',

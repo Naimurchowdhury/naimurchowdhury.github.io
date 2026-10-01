@@ -42,11 +42,12 @@ $('#copy-email').addEventListener('click', () => copyText(email, 'Email copied: 
 let storedMotion;
 try { storedMotion = localStorage.getItem('naimur-motion'); } catch { /* Use the device preference. */ }
 const motionQuery = matchMedia('(prefers-reduced-motion: reduce)');
-let paused = storedMotion ? storedMotion === 'paused' : motionQuery.matches;
+let paused = motionQuery.matches || storedMotion === 'paused';
 function updateMotion() {
   document.documentElement.dataset.motion = paused ? 'paused' : 'running';
   $('#motion-toggle').setAttribute('aria-pressed', String(paused));
-  $('.motion-label').textContent = paused ? 'Resume animations' : 'Pause animations';
+  $('#motion-toggle').disabled = motionQuery.matches;
+  $('.motion-label').textContent = motionQuery.matches ? 'Reduced motion enabled' : paused ? 'Resume animations' : 'Pause animations';
   $('.motion-icon').innerHTML = paused ? '<svg class="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square" stroke-linejoin="miter" aria-hidden="true" focusable="false"><path d="m8 4 12 8-12 8z"/></svg>' : '<svg class="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square" stroke-linejoin="miter" aria-hidden="true" focusable="false"><path d="M8 5v14M16 5v14"/></svg>';
 }
 updateMotion();
@@ -56,7 +57,10 @@ $('#motion-toggle').addEventListener('click', () => {
   updateMotion();
   try { localStorage.setItem('naimur-motion', paused ? 'paused' : 'running'); } catch { /* Preference remains for this visit. */ }
 });
-motionQuery.addEventListener('change', event => { if (!storedMotion) { paused = event.matches; updateMotion(); } });
+motionQuery.addEventListener('change', event => {
+  paused = event.matches || storedMotion === 'paused';
+  updateMotion();
+});
 
 // Navigation stays usable with touch, keyboard, and a narrow viewport.
 function toggleMenu(open) {

@@ -2,7 +2,7 @@
   display: block;
   width: 100%;
   height: auto;
-  color: #20251f;
+  color: #242424;
   font-family: inherit;
   overflow: hidden;
   isolation: isolate;
@@ -10,7 +10,7 @@
 
 .research-diagram text {
   font-family: inherit;
-  fill: #20251f;
+  fill: #242424;
 }
 
 .research-diagram .rd-kicker {
@@ -53,19 +53,19 @@
 
 .research-diagram .rd-label--light,
 .research-diagram .rd-small--light {
-  fill: #fffdf7;
+  fill: #ffffff;
 }
 
 .research-diagram .rd-icon {
   fill: none;
-  stroke: #20251f;
+  stroke: #242424;
   stroke-width: 1.7;
   stroke-linecap: round;
   stroke-linejoin: round;
 }
 
 .research-diagram .rd-icon--light {
-  stroke: #fffdf7;
+  stroke: #ffffff;
 }
 
 .research-diagram .rd-route {
@@ -90,17 +90,17 @@
     visibility: visible;
     offset-distance: 0%;
     offset-rotate: 0deg;
-    animation: rd-travel 3.8s linear infinite;
+    animation: rd-travel 6s linear infinite;
     animation-delay: var(--rd-delay, 0s);
   }
 }
 
 .research-diagram .rd-pulse {
-  animation: rd-breathe 3.8s ease-in-out infinite;
+  animation: rd-breathe 6s ease-in-out infinite;
 }
 
 .research-diagram .rd-stock {
-  animation: rd-stock 4.8s ease-in-out infinite;
+  animation: rd-stock 7s ease-in-out infinite;
   animation-delay: var(--rd-delay, 0s);
 }
 
