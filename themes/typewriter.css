@@ -198,7 +198,7 @@ dialog::backdrop { background: #39332d80; }
 @media (max-width: 760px) {
   :root { --sidebar: 0px; }
   main { padding: 0 25px; }
-  .mobile-header { padding: 0 25px; height: 65px; }
+  .mobile-header { padding: 10px 25px; height: var(--mobile-header-height); }
   .mobile-brand { font-size: 10px; letter-spacing: .5px; font-weight: 400; }
   .mobile-brand .brand-mark { font-size: 22px; }
   .sidebar { width: 275px; padding: 28px 25px; }
