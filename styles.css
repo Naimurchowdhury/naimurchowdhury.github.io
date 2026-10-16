@@ -38,8 +38,6 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .skip-link:focus { top: 12px; }
 .ui-icon { display: inline-block; width: 1em; height: 1em; flex-shrink: 0; vertical-align: -.15em; max-width: none; }
 .link-icon { display: block; width: 16px; height: 16px; flex: 0 0 16px; max-width: none; }
-.hello-link { display: inline-flex; align-items: center; gap: 7px; white-space: nowrap; }
-.mobile-theme-row { display: none; }
 
 /* A quiet, fixed index keeps the whole site on one continuous page. */
 .sidebar { position: fixed; inset: 0 auto 0 0; width: var(--sidebar); padding: 36px 20px 24px; background: var(--ink); color: var(--paper); z-index: 20; display: flex; flex-direction: column; border-right: 1px solid var(--ink); overflow-y: auto; }
@@ -75,12 +73,6 @@ main { margin-left: var(--sidebar); padding: 0 clamp(26px, 3.5vw, 64px); max-wid
 .topbar { flex-wrap: wrap; height: auto; min-height: 88px; padding: 18px 0; row-gap: 12px; }
 .topbar .topbar-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 14px; letter-spacing: 0; color: var(--ink); }
 .topbar-actions > a { display: inline-flex; align-items: center; gap: 8px; font-size: 12px; }
-.theme-picker { display: flex; align-items: center; gap: 0; font-size: 11px; line-height: 1.4; letter-spacing: 0; }
-.theme-picker > span { color: var(--muted); padding-right: 9px; font-size: 10px; }
-.theme-picker > a { padding: 7px 9px; border: var(--line); min-height: 32px; display: inline-flex; align-items: center; }
-.theme-picker > a + a { border-left: 0; }
-.theme-picker > a[aria-current] { background: var(--ink); color: var(--paper); border-color: var(--ink); }
-.theme-picker > a:hover { text-decoration: underline; text-underline-offset: 3px; }
 .overview { display: grid; grid-template-columns: minmax(0, 1.65fr) minmax(245px, 1fr); gap: 26px; }
 .hero-main { border: var(--line); background: var(--white); padding: 32px 32px 0; display: flex; flex-direction: column; min-height: 430px; }
 .eyebrow { display: flex; align-items: center; gap: 8px; font-size: 9px; font-weight: 500; letter-spacing: 1.2px; }
@@ -311,16 +303,12 @@ body.dialog-open { overflow: hidden; }
 
 @media (max-width: 760px) {
   :root { --sidebar: 0px; }
-  :root { --mobile-header-height: 116px; }
+  :root { --mobile-header-height: 65px; }
   html { scroll-padding-top: calc(var(--mobile-header-height) + 16px); }
-  .mobile-header { height: var(--mobile-header-height); border-bottom: var(--line); padding: 10px 22px; background: var(--paper); position: sticky; top: 0; z-index: 30; display: grid; grid-template-columns: minmax(0,1fr) 44px; grid-template-rows: 44px 44px; align-items: center; gap: 7px 12px; }
+  .mobile-header { height: var(--mobile-header-height); border-bottom: var(--line); padding: 10px 22px; background: var(--paper); position: sticky; top: 0; z-index: 30; display: grid; grid-template-columns: minmax(0,1fr) 44px; grid-template-rows: 44px; align-items: center; gap: 12px; }
   .mobile-brand { display: flex; gap: 11px; align-items: center; font: 500 11px var(--heading); letter-spacing: 1px; }
   .mobile-brand .brand-mark { width: 32px; height: 32px; flex-basis: 32px; font-size: 26px; }
   .mobile-header .icon-button { height: 44px; width: 44px; }
-  .mobile-theme-row { display: flex; grid-column: 1/-1; align-items: center; justify-content: space-between; gap: 12px; }
-  .mobile-theme-row .hello-link { min-height: 44px; font-size: 12px; }
-  .mobile-theme-row .theme-picker { font-size: 12px; }
-  .mobile-theme-row .theme-picker > a { min-height: 44px; padding: 9px 10px; }
   .sidebar { width: 265px; top: var(--mobile-header-height); transform: translateX(-100%); visibility: hidden; transition: transform .2s; padding: 27px 20px; z-index: 25; }
   .sidebar.is-open { transform: translateX(0); visibility: visible; }
   .sidebar .brand, .sidebar-note { display: none; }
@@ -331,7 +319,7 @@ body.dialog-open { overflow: hidden; }
   .nav-scrim { display: block; position: fixed; inset: var(--mobile-header-height) 0 0; background: #24242480; z-index: 24; }
   .mobile-nav-open { overflow: hidden; }
   main { margin: 0; padding: 0 24px; }
-  .topbar { display: none; }
+  .topbar { min-height: 66px; }
   .profile-bottom { flex-wrap: wrap; gap: 8px 12px; }
   .overview { grid-template-columns: minmax(0,1.5fr) minmax(220px,1fr); gap: 18px; }
   .hero-main h1 { font-size: 40px; }
@@ -454,9 +442,3 @@ body.dialog-open { overflow: hidden; }
 }
 html[data-motion='paused'] { scroll-behavior: auto; }
 html[data-motion='paused'] *, html[data-motion='paused'] *::before, html[data-motion='paused'] *::after { animation-play-state: paused !important; }
-
-/* Both themes keep the picker readable when the top bar wraps on small screens. */
-@media (max-width: 760px) {
-  .topbar { height: auto; min-height: 82px; }
-  .topbar .topbar-actions { gap: 12px; }
-}

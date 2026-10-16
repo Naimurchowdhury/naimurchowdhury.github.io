@@ -1,17 +1,5 @@
 export function initializeTheme() {
   const theme = document.documentElement.dataset.theme || 'typewriter';
-  const themeLinks = [...document.querySelectorAll('[data-theme-choice]')];
-  themeLinks.forEach(link => {
-    if (link.dataset.themeChoice === theme) link.setAttribute('aria-current', 'true');
-  });
-  function updateThemeLinks() {
-    themeLinks.forEach(link => {
-      // Prepare normal links before touch/click navigation, including section URLs.
-      link.href = `?theme=${link.dataset.themeChoice}${location.hash}`;
-    });
-  }
-  updateThemeLinks();
-  window.addEventListener('hashchange', updateThemeLinks);
   if (theme !== 'typewriter') return;
   document.body.classList.add('theme-typewriter');
   document.querySelector('meta[name="theme-color"]').content = '#f1f0df';
