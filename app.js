@@ -1,5 +1,8 @@
-import { renderDiagram } from './diagrams.js';
+import { initializeTheme } from './themes.js';
 import { projects } from './projects.js';
+
+initializeTheme();
+const { renderDiagram } = await import(document.documentElement.dataset.theme === 'classic' ? './diagrams.js' : './themes/pixel-diagrams.js');
 
 const $ = (selector, root = document) => root.querySelector(selector);
 const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];

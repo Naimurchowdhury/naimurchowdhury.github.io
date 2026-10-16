@@ -1,5 +1,14 @@
 [
   {
+    "id": "core-marl-2026",
+    "title": "CoRe-MARL: Cooperative Redistribution Under Unknown Dynamics Using Recurrent Multi-Agent Reinforcement Learning",
+    "authors": "Naimur Rahman Chowdhury, Shatabdi Sen Prapti, Md. Salehin Seyam, Limon Bin Hossain",
+    "year": 2026,
+    "venue": "arXiv:2609.18639",
+    "type": "Preprint",
+    "url": "https://arxiv.org/abs/2609.18639"
+  },
+  {
     "id": "food-substitution-2026",
     "title": "Beyond Similarity: Heterogeneous Graph Learning for Multi-Objective Food Substitution in Charitable Food Agencies",
     "authors": "N. R. Chowdhury, L. B. Hossain",

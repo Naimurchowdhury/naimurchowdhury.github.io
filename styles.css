@@ -69,6 +69,15 @@ main { margin-left: var(--sidebar); padding: 0 clamp(26px, 3.5vw, 64px); max-wid
 .topbar > a { display: inline-flex; gap: 12px; align-items: center; font-size: 11px; letter-spacing: 0; }
 .topbar > a:hover { text-decoration: underline; text-underline-offset: 5px; }
 .status-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); display: inline-block; }
+.topbar { flex-wrap: wrap; height: auto; min-height: 88px; padding: 18px 0; row-gap: 12px; }
+.topbar .topbar-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 14px; letter-spacing: 0; color: var(--ink); }
+.topbar-actions > a { display: inline-flex; align-items: center; gap: 8px; font-size: 12px; }
+.theme-picker { display: flex; align-items: center; gap: 0; font-size: 11px; line-height: 1.4; letter-spacing: 0; }
+.theme-picker > span { color: var(--muted); padding-right: 9px; font-size: 10px; }
+.theme-picker > a { padding: 7px 9px; border: var(--line); min-height: 32px; display: inline-flex; align-items: center; }
+.theme-picker > a + a { border-left: 0; }
+.theme-picker > a[aria-current] { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.theme-picker > a:hover { text-decoration: underline; text-underline-offset: 3px; }
 .overview { display: grid; grid-template-columns: minmax(0, 1.65fr) minmax(245px, 1fr); gap: 26px; }
 .hero-main { border: var(--line); background: var(--white); padding: 32px 32px 0; display: flex; flex-direction: column; min-height: 430px; }
 .eyebrow { display: flex; align-items: center; gap: 8px; font-size: 9px; font-weight: 500; letter-spacing: 1.2px; }
@@ -436,3 +445,9 @@ body.dialog-open { overflow: hidden; }
 }
 html[data-motion='paused'] { scroll-behavior: auto; }
 html[data-motion='paused'] *, html[data-motion='paused'] *::before, html[data-motion='paused'] *::after { animation-play-state: paused !important; }
+
+/* Both themes keep the picker readable when the top bar wraps on small screens. */
+@media (max-width: 760px) {
+  .topbar { height: auto; min-height: 82px; }
+  .topbar .topbar-actions { gap: 12px; }
+}

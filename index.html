@@ -13,6 +13,8 @@
   <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="./styles.css">
   <link rel="stylesheet" href="./diagrams.css">
+  <link rel="stylesheet" id="typewriter-theme" href="./themes/typewriter.css">
+  <script src="./theme-init.js"></script>
   <link rel="preload" href="./assets/portrait.jpg" as="image">
   <script type="module" src="./app.js"></script>
 </head>
@@ -43,7 +45,7 @@
     </div>
   </aside>
   <main id="main">
-    <div class="topbar"><div><span class="status-dot" aria-hidden="true"></span>RESEARCH WITH A PURPOSE</div><a href="mailto:nchowdhury@ncsu.edu">Say hello <span aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square" stroke-linejoin="miter" aria-hidden="true" focusable="false"><path d="M5 19 19 5M5 5h14v14"/></svg></span></a></div>
+    <div class="topbar"><div><span class="status-dot" aria-hidden="true"></span>RESEARCH WITH A PURPOSE</div><div class="topbar-actions"><a href="mailto:nchowdhury@ncsu.edu">Say hello <span aria-hidden="true">↗</span></a><nav class="theme-picker" aria-label="Website theme"><span>Theme</span><a href="?theme=typewriter" data-theme-choice="typewriter">Typewriter</a><a href="?theme=classic" data-theme-choice="classic">Classic</a></nav></div></div>
     <section id="overview" class="overview section-anchor" aria-labelledby="hero-heading">
       <div class="hero-main">
         <div class="eyebrow">OPERATIONS RESEARCH · MACHINE LEARNING</div>
@@ -67,6 +69,7 @@
         <span class="section-aside">Research, work, and milestones.</span>
       </div>
       <ol class="news-list">
+        <li><time datetime="2026-09-16">Sep 16, 2026</time><p>Our <a href="https://arxiv.org/abs/2609.18639" target="_blank" rel="noopener noreferrer">CoRe-MARL preprint</a> is on arXiv, studying cooperative relief redistribution under uncertain, evolving supply and demand.</p></li>
         <li><time datetime="2026-08-22">Aug 22, 2026</time><p>Our preprint <a href="https://arxiv.org/abs/2608.21979" target="_blank" rel="noopener noreferrer">Beyond Similarity</a> is on arXiv, exploring graph learning for food substitution in charitable food agencies.</p></li>
         <li><time datetime="2026-07">Jul 2026</time><p>Completed my PhD studies in Industrial Engineering at NC State. My dissertation brings together location-allocation and multi-agent preferences in a food-bank network.</p></li>
         <li><time datetime="2026-05">May 2026</time><p>Joined Amazon as an <strong>Applied Scientist II</strong>, working in Modeling and Optimization with simulation, mathematical models, and reinforcement learning.</p></li>

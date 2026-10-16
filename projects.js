@@ -2,15 +2,15 @@ export const projects = [
   {
     id: 'redistribution', title: 'Relief that learns to cooperate.',
     paperTitle: 'CoRe-MARL: Cooperative Redistribution Under Unknown Dynamics Using Recurrent Multi-Agent Reinforcement Learning',
-    category: 'learning', tags: ['Multi-agent RL', 'Humanitarian logistics'], status: 'Research manuscript', color: '#f1f1ee',
+    category: 'learning', tags: ['Multi-agent RL', 'Humanitarian logistics'], status: 'Preprint · 2026', color: '#f1f1ee',
     summary: 'What if relief centers could learn to share? Recurrent multi-agent learning coordinates scarce supplies when demand is uncertain.',
     metric: '33.2%', metricLabel: 'smaller service gap in simulation',
     question: 'When every relief center sees only part of a changing network, how can they serve local needs while helping the centers under the greatest pressure?',
     approach: ['Model relief centers as cooperating agents with partial observations of supply and demand.', 'Use recurrent MAPPO with centralized training and decentralized decisions to learn when to serve, reserve, or transfer supplies.', 'Compare performance with independent learning and a local-only baseline on held-out simulated episodes.'],
     finding: 'In 20 held-out simulated episodes, the service gap was 33.2% smaller and worst-center service was 50.4% higher than with the local-only baseline. The fairness gain came with lower total network service (0.6276 versus 0.6686), making the trade-off explicit.',
     authors: 'Naimur Rahman Chowdhury, Shatabdi Sen Prapti, Md. Salehin Seyam, Limon Bin Hossain',
-    sourceNote: 'Research manuscript · Table 3, PDF page 16. Results describe a simulation, not an operational deployment.',
-    url: null,
+    sourceNote: 'arXiv:2609.18639, submitted 16 September 2026. Quantitative results above refer to Table 3, PDF page 16 of the supplied manuscript version; they describe simulation, not an operational deployment.',
+    url: 'https://arxiv.org/abs/2609.18639', linkLabel: 'Read the preprint',
   },
   {
     id: 'substitution', title: 'A smarter food swap.',
