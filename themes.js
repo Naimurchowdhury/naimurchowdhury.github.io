@@ -9,8 +9,8 @@ export function initializeTheme() {
   about.firstChild.textContent = 'A little about me ';
   document.querySelector('.profile-top .tiny-label').textContent = 'PORTRAIT / 01';
   document.querySelector('.sidebar-note p').innerHTML = 'Better decisions.<br>Human impact.';
-  document.querySelector('.sidebar-note > span').textContent = 'Notes from research & practice.';
-  document.querySelector('.brand-caption').textContent = 'RESEARCH & PRACTICE';
+  document.querySelector('.sidebar-note > span').remove();
+  document.querySelector('.brand-caption').remove();
   document.querySelector('.nav-label').textContent = 'CONTENTS';
-  document.querySelector('.topbar > div').lastChild.textContent = 'RESEARCH & PRACTICE';
+  document.querySelector('.topbar > div').remove();
 }

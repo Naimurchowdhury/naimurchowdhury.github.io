@@ -38,7 +38,7 @@ button, a { transition: none; }
 .version-link { display: block; font-size: 10px; color: var(--muted); margin-top: 24px; text-decoration: underline; text-underline-offset: 4px; }
 .sidebar-copyright { margin-top: 13px; }
 main { max-width: 1530px; padding: 0 clamp(28px, 5.2vw, 82px); }
-.topbar { height: auto; min-height: 91px; border-bottom: var(--line); font-size: 9px; letter-spacing: 1.3px; }
+.topbar { height: auto; min-height: 91px; border-bottom: var(--line); font-size: 9px; letter-spacing: 1.3px; justify-content: flex-end; }
 .topbar > div { gap: 10px; flex-wrap: wrap; }
 .status-dot { border-radius: 0; width: 7px; height: 7px; background: var(--ink); }
 .preview-label { font-size: 8px; letter-spacing: .5px; border: var(--line); padding: 2px 5px; margin-left: 5px; }
